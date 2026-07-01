@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Products</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: radial-gradient(
+          circle at top left,
+          #ffe8d6,
+          #fff1e6 35%,
+          #f4e9e1 100%
+        );
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: #3f3d56;
+      }
+
+      body > h2,
+      body > input,
+      body > button {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      h2 {
+        margin: 0 0 24px;
+        font-size: 2rem;
+        text-align: center;
+        color: #c05454;
+        letter-spacing: 0.02em;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        margin: 12px 0;
+        padding: 14px 16px;
+        border: 1px solid #d8c9c1;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+        font-size: 1rem;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #c05454;
+        box-shadow: 0 0 0 4px rgba(192, 84, 84, 0.12);
+      }
+
+      button {
+        margin-top: 18px;
+        padding: 14px 18px;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #d66d5a, #c05454);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 24px rgba(192, 84, 84, 0.18);
+      }
+
+      a.back-link {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 16px auto 0;
+        padding: 14px 18px;
+        border-radius: 14px;
+        background: #c05454;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      a.back-link:hover {
+        background: #d66d5a;
+        transform: translateY(-1px);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Add New Product</h2>
+
+    <input id="name" placeholder="Product Name" />
+    <input id="price" placeholder="Price" />
+    <input id="quantity" placeholder="Total Quantity" />
+
+    <button type="button" onclick="addProduct()">Add Product</button>
+    <a href="/" class="back-link">Back to product list</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
